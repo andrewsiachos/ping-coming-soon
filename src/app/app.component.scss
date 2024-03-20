@@ -1,0 +1,149 @@
+//Color Variables
+$blue:hsl(223, 87%, 63%);
+$paleBlue: hsl(223, 100%, 88%);
+$lightRed: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$veryDarkBlue: hsl(209, 33%, 12%);
+//-------------------------------------
+
+header{
+  padding: 80px 0 50px 0;
+  text-align: center;
+}
+main{
+  font-family: "Libre Franklin", sans-serif;
+  h1{
+    color: $gray;
+    font-weight: 300;
+    font-size: 38px;
+    text-align: center;
+    span{
+      color: black;
+      font-weight: 700;
+    }
+  }
+
+  .subtitle{
+    margin: 25px 0 38px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  form{
+    display: flex;
+    justify-content: center;
+    div{
+      margin-right: 15px;
+    }
+    input{
+      width: 420px;
+      padding: 12px 0 12px 22px;
+      border: 1px solid $paleBlue;
+      border-radius: 25px;
+      &::placeholder{
+        color: $blue;
+      }
+    }
+    .error{
+      color: $lightRed;
+      font-style: italic;
+      font-size: 12px;
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    button{
+      padding: 12px 32px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background-color: $blue;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      &:hover{
+        background-color: hsl(223, 86%, 67%);;
+      }
+    }
+  }
+
+  #illustration{
+    width: 45%;
+    margin: 70px auto 0 auto;
+    img{
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
+footer{
+  margin-top: 60px;
+
+  #socials{
+    display: flex;
+    justify-content: center;
+
+    div{
+      border: 1px solid $blue;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $blue;
+      margin-right: 15px;
+      cursor: pointer;
+      &:hover{
+        background-color: $blue;
+        color: white;
+      }
+    }
+  }
+
+  #copyright{
+    text-align: center;
+    color: $gray;
+    margin-top: 25px;
+  }
+}
+
+@media(max-width:768px){
+  main{
+    h1{
+      font-size: 35px;
+    }
+    .subtitle{
+      font-size: 13px;
+    }
+
+    form{
+      flex-direction: column;
+      width: 78%;
+      margin: auto;
+      div{
+        width: 100%;
+        margin-right: 0;
+      }
+      input{
+        width: 100%;
+      }
+      .error{
+        text-align: center;
+      }
+      button{
+        width: 100%;
+        margin-top: 25px;
+      }
+    }
+
+    #illustration{
+      width: 75%;
+    }
+  }
+
+
+
+
+}
